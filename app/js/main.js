@@ -6,6 +6,6 @@ $('.top-slider__inner').slick({
   fade: true,
   autoplay: true,
   autoplaySpeed: 2000
-})
+});
 
 });
