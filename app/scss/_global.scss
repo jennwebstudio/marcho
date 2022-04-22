@@ -18,12 +18,33 @@ body {
   padding: 0 15px;
 }
 
+.main {
+  flex-grow: 1;
+}
+
 a {
   color: $default;
   font-size: 16px;
   line-height: 26px;
   @extend %quicksand-400;
 }
+
+.title {
+  text-align: center;
+  @extend %roboto-700;
+  font-size: 48px;
+  line-height: 65px;
+  color: $title;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.text {
+  max-width: 570px;
+  text-align: center;
+  margin: 0 auto 55px;
+}
+
 
 .breadcrumbs {
   display: inline-flex;
@@ -66,6 +87,10 @@ a {
   &__link {
     color: inherit;
   }
+}
+
+.star {
+  margin: 0 auto;
 }
 
 .header--404-page {

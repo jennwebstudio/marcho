@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/contacts.min.css">
+</head>
+<body>
+  
+  {% include 'app/module/_header/_header.html' %}
+
+  <main class="main">
+    
+  {% include 'app/module/_top/_top.html' %}
+
+    <section class="map">
+      <div class="container">
+        <div id="map">
+
+        </div> <!--id map-->
+      </div>
+    </section> <!--map-->
+
+    <section class="contacts">
+      <div class="container">
+        <div class="contacts__inner">
+          <div class="contacts__info">
+            <h4 class="contacts__info-title">Feel Free Don’t Hesitate To Contact With Us</h4>
+            <p class="contacts__info-text">
+              Lorem ipsum dolor sit amet, consectetur adingn elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecnaacnrao cumsan lacus vel facilisis. 
+            </p>
+            <ul class="contacts__info-list">
+              <li class="contacts__info-item">
+                <a class="contacts__info-phone" href="tel:+01234567896">+0-123-456-7896</a>
+                <a class="contacts__info-phone" href="tel:+01234567896">+0-123-456-7896</a>
+              </li>
+              <li class="contacts__info-item contacts__info--location">
+                Ranlon Market 789 Road,<br>Market Street, Newyork
+              </li>
+              <li class="contacts__info-item contacts__info--email">
+                <div>yourmailaddress@gmail.com</div>
+                <div>companymail@gmail.com</div>
+              </li>
+            </ul>
+          </div> <!--contacts__info-->
+          <form class="contacts__form" action="#">
+            <p class="contacts__form-title">Contact Form</p>
+            <div class="contacts__form-box">
+              <input class="contacts__form-input" type="text" placeholder="Your Name">
+              <input class="contacts__form-input" type="text" placeholder="Your E-mail Address">
+            </div><!--contacts__form-box-->
+            <input class="contacts__form-input" type="text" placeholder="Subject">
+            <textarea class="contacts__form-textarea" placeholder="Message here"></textarea>
+            <button class="contacts__form-btn"type="submit">SEND MESSAGE</button>
+          </form> <!--contacts__form-->
+        </div> <!--contacts__inner-->
+      </div>
+    </section>
+
+  </main>
+
+  {% include 'app/module/_footer/_footer.html' %}
+  
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+    <script>
+      function initMap() {
+      const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 13,
+      center: { lat: 40.74502664909988, lng: -73.97834012689229 },
+      });
+    }
+    //window.initMap = initMap;  
+    </script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
