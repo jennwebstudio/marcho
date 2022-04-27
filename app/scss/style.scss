@@ -20,6 +20,7 @@
     margin-bottom: 40px;
     @extend %roboto-700;
     font-size: 48px;
+    line-height: 52px;
   }
   &__text {
     margin-bottom: 55px;
@@ -321,6 +322,24 @@
 
 .jq-selectbox__dropdown {
   background-color: #fff;
+}
+
+.blog-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  &__author,
+  &__date {
+    padding-left: 30px;
+    background-repeat: no-repeat;
+  }
+  &__author {
+    background-image: url('../images/icons/user-gray.svg');
+  }
+  &__date {
+    background-image: url('../images/icons/time.svg');
+  }
 }
 
 .product-page {
@@ -1148,7 +1167,5 @@
     border: none;
   }
 }
-
-
 
 @import 'media';
